@@ -1,0 +1,11 @@
+# MOEX ArenaGo trading bot — зависимости
+# Гибкие диапазоны для совместимости с окружением серверов организаторов.
+
+requests>=2.31,<3
+pandas>=2.0,<4
+numpy>=1.24,<3
+
+# T-Invest SDK (Т-Технологии). Пакет: t-tech-investments, импорт: t_tech.invest
+# Доступен с внутреннего индекса Т-Банка (см. --extra-index-url в Dockerfile):
+#   https://opensource.tbank.ru/api/v4/projects/238/packages/pypi/simple
+t-tech-investments

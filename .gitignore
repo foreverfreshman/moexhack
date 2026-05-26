@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.db
+*.log
+venv/
+.venv/
+market_data_*/
+*.csv
+data/logs/

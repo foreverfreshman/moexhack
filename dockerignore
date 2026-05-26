@@ -1,0 +1,27 @@
+# Не копировать в образ
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.db
+*.json
+bot_state.*
+.env
+.git/
+.gitignore
+*.md
+*.log
+.pytest_cache/
+.venv/
+venv/
+test_*.py
+*_test.py
+# Тестовые/исследовательские данные
+test_data/
+market_data_*/
+*.csv
+market_data_*
+*.csv
+bot_state.db
+venv

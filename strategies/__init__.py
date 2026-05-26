@@ -1,0 +1,1 @@
+"""MOEX bot strategies package."""
