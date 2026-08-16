@@ -42,18 +42,23 @@
 ## Архитектура
 
 ```
-main.py              — оркестратор: фазовый автомат дня, исполнение, риск, recovery
+main.py               — оркестратор: фазовый автомат дня, исполнение, риск, recovery
 ├── strategies/
 │   ├── mom21.py      — cross-sectional momentum
 │   └── gap_fade.py   — gap fade с side-aware TP/SL и news-вето
 ├── data/
 │   └── tinvest_stream.py — рыночные данные через T-Invest API (цены, лоты, свечи)
+├── research/         — R&D среда (анализ данных, бэктесты, оптимизация)
+│   ├── compare_strategies.py — оценка перформанса и PnL метрик
+│   ├── intraday_eval.py      — валидация внутридневных гипотез
+│   └── pipeline.py           — пайплайн обработки исторических данных
 ├── arenago_client.py — REST-клиент ArenaGo (ордера в лотах, позиции, типизированные ошибки)
 ├── portfolio.py      — расчёт целевых весов → позиции → ордера (diff)
 ├── monitor.py        — SQLite-персистенс (состояние, сделки, PnL) + риск-монитор
 ├── news_filter.py    — LLM-фильтр новостного риска (polza.ai)
 ├── Dockerfile        — единый контейнер (требование платформы)
 └── requirements.txt
+
 ```
 
 Фазовый автомат торгового дня (время МСК): `prepare` (09:55, загрузка данных) →
